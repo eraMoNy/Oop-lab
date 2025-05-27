@@ -1,43 +1,45 @@
+import java.util.Scanner;
+import java.lang.Math;
 public class Main {
-   // static void myMethod(){
-        //System.out.println("Era");
-   // }
-    static void myMethod(String name){
-        System.out.println(name);
+    public static void main(String[] args){
+         Scanner input=new Scanner(System.in);
+         System.out.println("Enter the size of array: ");
+         int size=input.nextInt();
+         int[]arr=new int[size];
+         int sum=0;
+         System.out.println("Enter the value of array: ");
+         for(int i=0;i<size;i++){
+            arr[i]=input.nextInt();
+         }
+         for(int i=0;i<size;i++){
+            sum+=arr[i];
+         }
+         System.out.println(sum);
+
+        /*Scanner sc=new Scanner(System.in);
+        Circle c1=new Circle();
+        System.out.println("Enter the radius: ");
+        c1.radius=sc.nextFloat();
+        c1.area();
+        c1.PI=3.1416f;*/
+
+       /*  Student s1=new Student();
+        System.out.println("Enter your name: ");
+        s1.name=sc.next();
+        System.out.println("Enter your id: ");
+        s1.id=sc.nextInt();
+        System.out.println("Enter your cgpa: ");
+        s1.cgpa=sc.nextFloat();
+        s1.display();*/
+        
+
+         //System.out.println("Hello, World!");
+        /*Student s1=new Student();
+        s1.setvalue("Era",12,3.5f);
+        s1.display();
+        Student s2=new Student();
+        s2.name="Mony";
+        s2.id=14;
+        s2.display();*/
     }
-    static void myMethod(String fname, String lname){
-        System.out.println(fname+" "+lname);
-    }
-
-    public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-
-        int n = arr.length;
-
-        int sum = 0;
-        for (int i : arr) {
-            if (arr[i] == 6 || arr[i] == 7) {
-                continue;
-            } else if (arr[i] == 9) {
-                break;
-            } else {
-                sum = sum + arr[i];
-            }
-
-                /*int sum=0;
-
-                for (int i : arr) {
-                    sum = sum + i;
-                }
-                System.out.println("sum is "+sum);
-                double average=sum/10;
-                System.out.println("average is "+average);*/
-        }
-        System.out.println("sum is "+sum);
-       // myMethod();
-       myMethod("Era");
-        myMethod("Era","Mony");
-
-    }
-        }
-
+}
